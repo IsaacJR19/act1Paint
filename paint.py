@@ -1,3 +1,7 @@
+#Isaac Jacinto Ruiz A01658578
+#Klaus Manuel Cedillo Arreondo A01653257
+
+
 from turtle import *
 from freegames import vector
 
@@ -59,6 +63,7 @@ onkey(lambda: color('white'), 'W')
 onkey(lambda: color('green'), 'G')
 onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
+onkey(lambda: color('brown'), 'O')#Ejercicio 1: Color Nuevo (Café)
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
 onkey(lambda: store('shape', circle), 'c')
