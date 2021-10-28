@@ -4,7 +4,10 @@
 
 from turtle import *
 from freegames import vector
+import math #Biblioteca para calculos Circle
 
+
+speed (1000)#Velocidad Ejecucion
 def line(start, end):
     "Draw line from start to end."
     up()
@@ -25,9 +28,25 @@ def square(start, end):
 
     end_fill()
 
-def circle(start, end):
+def circle(start, end): # Ejercicio 2: Dibujar un circulo
     "Draw circle from start to end."
-    pass  # TODO
+    pi = 3.141592
+    diametro = end.x - start.x
+    radio = diametro / 2
+    circunferencia = 2 * pi * radio
+    arco = circunferencia / 360
+
+    # TODO
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+
+    for i in range(360):
+        forward(arco)
+        right(1)
+
+    end_fill()
 
 def rectangle(start, end):
     "Draw rectangle from start to end."
