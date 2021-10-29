@@ -48,13 +48,35 @@ def circle(start, end): # Ejercicio 2: Dibujar un circulo
 
     end_fill()
 
-def rectangle(start, end):
-    "Draw rectangle from start to end."
-    pass  # TODO
+def rectangle(start, end): # Ejercicio 3: Dibujar un rectangulo
+    "Draw rectangle from start to end." 
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
 
-def triangle(start, end):
+    for i in range(2):
+        forward(end.x - start.x)
+        left(90)
+        forward(end.y - start.y)
+        left(90)
+    
+    end_fill()
+
+def triangle(start, end): # Ejercicio 4: Dibujar un triangulo equilatero
     "Draw triangle from start to end."
-    pass  # TODO
+    # TODO
+    up()
+    goto(start.x, start.y)
+    down()
+    lado = abs(end.x - start.x)
+    begin_fill()
+    
+    for i in range(3):
+        forward(lado)
+        left(120)
+        
+    end_fill()
 
 def tap(x, y):
     "Store starting point or draw shape."
